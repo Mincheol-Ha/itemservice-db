@@ -47,7 +47,7 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
     @Override
     public Item save(Item item) {
         String sql = "INSERT INTO item (item_name, price, quantity) " +
-                "VALUES (:itemName, :prica, : quantity)";
+                "VALUES (:itemName, :price, :quantity)";
 
         SqlParameterSource param = new BeanPropertySqlParameterSource(item);
 
